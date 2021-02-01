@@ -35,6 +35,16 @@ namespace BlazorWASMAuthorization.Client
 
             }).AddAccountClaimsPrincipalFactory<RemoteAuthenticationState, AuthZUserAccount, AuthZUserAccountFactory>();
 
+
+            builder.Services.AddAuthorizationCore( options =>
+            {
+                    options.AddPolicy("GroupPolicy", policy => 
+                    {
+                        string requiredGroupId = builder.Configuration.GetValue<string>("RequiredGroupId");
+                        policy.RequireClaim("groups",requiredGroupId);
+                    });
+            });
+
             await builder.Build().RunAsync();
         }
     }
