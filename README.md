@@ -63,3 +63,5 @@ with this code
             }).AddAccountClaimsPrincipalFactory<RemoteAuthenticationState, AuthZUserAccount, AuthZUserAccountFactory>();
 
 ```
+
+In my code example I moved the API Url into the appsettings.json file in the wwwroot folder.
