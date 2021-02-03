@@ -2,6 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <Version>0.0.1</Version>
+    <Authors>Christian Will</Authors>
+    <Description>With the default template for a hosted Blazor Webassembly project with Azure Active Directory it's not possible to authorize against a role. This project shows how to solve this issue</Description>
+     <RepositoryUrl>https://github.com/dnkh/BlazorWASMAuthorization</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
